@@ -90,8 +90,9 @@ function NoteForm({ onAddNote }) {
           </CardContent>
     </Card>
         </Grid>
-        <p></p>
+       
         <Grid item xs={12}>
+        <p></p>
           <Button type="submit" variant="contained" color="primary">
             Add Note
           </Button>
