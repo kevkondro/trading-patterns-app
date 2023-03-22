@@ -6,6 +6,9 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
     root: {
       margin: theme.spacing(2),
+       },
+    input: { // add a new class to set the width of the TextField
+      width: '100%',
     },
     button: {
       margin: theme.spacing(1),
@@ -54,7 +57,7 @@ function NotesList({ notes, onDeleteNote }) {
   
 
 function NoteForm({ onAddNote }) {
-    const classes = useStyles();
+  
 
   const [content, setContent] = useState("");
 
@@ -67,19 +70,25 @@ function NoteForm({ onAddNote }) {
 
     setContent("");
   };
-
+  const classes = useStyles();
   return (
+   
     <form onSubmit={handleSubmit}>
       <Grid container direction="column" justify="flex-start" alignItems="left" className={classes.root}>
-
+      
         <Grid item xs={12}>
+        <Card>
+      <CardContent>
           <TextField
             label="Content"
             value={content}
             onChange={(event) => setContent(event.target.value)}
             multiline
-            rows={4}
+            rows={2}
+            className={classes.input}
           />
+          </CardContent>
+    </Card>
         </Grid>
         <p></p>
         <Grid item xs={12}>
@@ -89,6 +98,7 @@ function NoteForm({ onAddNote }) {
         </Grid>
       </Grid>
     </form>
+    
   );
 }
 
@@ -164,14 +174,14 @@ function Notes() {
   
     return (
       <div>
-        <h3>My Notes</h3>
+        <h3 style={{ fontFamily: "Droid Sans" }}>My Notes</h3>
         {notes.length > 0 ? (
-          <div>
+          <div >
             <NotesList notes={notes} onDeleteNote={handleDeleteNote} />
             <NoteForm onAddNote={handleAddNote} />
           </div>
         ) : (
-            <NoteForm onAddNote={handleAddNote} />
+            <NoteForm  onAddNote={handleAddNote} />
         )}
       </div>
     );
