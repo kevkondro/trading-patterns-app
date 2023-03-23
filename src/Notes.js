@@ -85,7 +85,7 @@ function NoteForm({ onAddNote }) {
           <Card className={classes.card}>
             <CardContent>
               <TextField
-                label="Content"
+                label="Your note..."
                 value={content}
                 onChange={(event) => setContent(event.target.value)}
                 multiline
