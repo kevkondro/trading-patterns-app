@@ -4,65 +4,65 @@ import { TextField, Button, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-      margin: theme.spacing(2),
-       },
-       card: { // add a new class to set the width of the Card
-        width: '90%', // set the width to 90% of the screen width
+  root: {
+    margin: theme.spacing(2),
+  },
+  card: { // add a new class to set the width of the Card
+    width: '90%', // set the width to 90% of the screen width
     maxWidth: '600px', // set a maximum width to prevent the card from getting too wide
-      },
-    input: { // add a new class to set the width of the TextField
-      width: '100%',
-    },
-    button: {
-      margin: theme.spacing(1),
-    },
-  }));
+  },
+  input: { // add a new class to set the width of the TextField
+    width: '100%',
+  },
+  button: {
+    margin: theme.spacing(1),
+  },
+}));
 
 function Note({ content }) {
   const classes = useStyles();
   return (
     <Card className={classes.card}>
-    <CardContent>
-      <Typography variant="body1">{content}</Typography>
-    </CardContent>
-  </Card>
+      <CardContent>
+        <Typography variant="body1">{content}</Typography>
+      </CardContent>
+    </Card>
   );
 }
 
 function NotesList({ notes, onDeleteNote }) {
-    const classes = useStyles();
-  
-    const handleDelete = (id) => {
-      onDeleteNote(id);
-    };
-  
-    return (
-        <Grid container direction="column" justify="flex-start" alignItems="left" className={classes.root}>
-        {notes.length > 0 ? (
-          notes.map((note) => (
-            <Grid item key={note.id}>
-              <Note content={note.content} />
-              <Button
-                variant="contained"
-                color="secondary"
-                className={classes.button}
-                onClick={() => handleDelete(note.id)}
-              >
-                Delete
-              </Button>
-            </Grid>
-          ))
-        ) : (
-          <Typography variant="body1">No notes found.</Typography>
-        )}
-      </Grid>
-    );
-  }
-  
+  const classes = useStyles();
+
+  const handleDelete = (id) => {
+    onDeleteNote(id);
+  };
+
+  return (
+    <Grid container direction="column" justify="flex-start" alignItems="left" className={classes.root}>
+      {notes.length > 0 ? (
+        notes.map((note) => (
+          <Grid item key={note.id}>
+            <Note content={note.content} />
+            <Button
+              variant="contained"
+              color="secondary"
+              className={classes.button}
+              onClick={() => handleDelete(note.id)}
+            >
+              Delete
+            </Button>
+          </Grid>
+        ))
+      ) : (
+        <Typography variant="body1">No notes found.</Typography>
+      )}
+    </Grid>
+  );
+}
+
 
 function NoteForm({ onAddNote }) {
-  
+
 
   const [content, setContent] = useState("");
 
@@ -77,34 +77,34 @@ function NoteForm({ onAddNote }) {
   };
   const classes = useStyles();
   return (
-   
+
     <form onSubmit={handleSubmit}>
       <Grid container direction="column" justify="flex-start" alignItems="left" className={classes.root}>
-      
+
         <Grid item xs={12}>
-        <Card className={classes.card}>
-      <CardContent>
-          <TextField
-            label="Content"
-            value={content}
-            onChange={(event) => setContent(event.target.value)}
-            multiline
-            rows={2}
-            className={classes.input}
-          />
-          </CardContent>
-    </Card>
+          <Card className={classes.card}>
+            <CardContent>
+              <TextField
+                label="Content"
+                value={content}
+                onChange={(event) => setContent(event.target.value)}
+                multiline
+                rows={2}
+                className={classes.input}
+              />
+            </CardContent>
+          </Card>
         </Grid>
-       
+
         <Grid item xs={12}>
-        <p></p>
+          <p></p>
           <Button type="submit" variant="contained" color="primary">
             Add Note
           </Button>
         </Grid>
       </Grid>
     </form>
-    
+
   );
 }
 
@@ -195,5 +195,5 @@ function Notes() {
   );
 }
 
-  
-  export default Notes;
+
+export default Notes;
