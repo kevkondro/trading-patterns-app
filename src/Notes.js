@@ -122,10 +122,23 @@ function Notes() {
           },
         }
       );
-
-      setNotes(await response.json());
+  
+      const newNotes = await response.json();
+  
+      // Get the existing notes from local storage
+      const existingNotes = localStorage.getItem("notes");
+  
+      // Compare the new and existing notes
+      if (JSON.stringify(newNotes) !== existingNotes) {
+        // Update the notes in state and local storage
+        setNotes(newNotes);
+        localStorage.setItem("notes", JSON.stringify(newNotes));
+      } else {
+        // If the notes are the same, use the existing notes from local storage
+        setNotes(JSON.parse(existingNotes));
+      }
     }
-
+  
     fetchData();
   }, []);
 
