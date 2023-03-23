@@ -95,7 +95,6 @@ function NoteForm({ onAddNote }) {
             </CardContent>
           </Card>
         </Grid>
-
         <Grid item xs={12}>
           <p></p>
           <Button type="submit" variant="contained" color="primary">
