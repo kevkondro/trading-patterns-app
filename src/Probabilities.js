@@ -80,7 +80,7 @@ export default function Probabilities() {
         For example, if you believe that a two-point stop is needed in the Emini, take the trade only if at least a two-point reward is reasonable.
       </p>
       <h1>Probability of success of 60 percent or better (reward has to be at least as big as risk to break even):</h1>
-      <p>
+   
         <li>Buying a high 2 pullback to the moving average in a bull trend. </li>
         <li>Selling a low 2 pullback to the moving average in a bear trend. </li>
         <li>Buying a wedge bull flag pullback in a bull trend.</li> 
@@ -94,7 +94,17 @@ export default function Probabilities() {
         <li>Trend reversals: </li> 
         <li>After a strong break of the trend line, look for a reversal after a test of the trend's extreme where there is a good reversal signal bar. ‘Traders are looking to buy a higher low or a lower low at a bottom, or to short a higher high or a lower high ata top. </li> 
         <li>Strong final flag reversal.</li> 
-      </p>
+        <li>Buying a third or fourth push down in a bear stairs pattern for a test of the low of the prior push down.</li>  
+        <li>Selling a third or fourth push up in a bull stairs pattern for a test of the high of the prior push up.</li> 
+        <li>Entering using limit orders; this requires more experience reading charts, because the trader is entering in a market that is going in the opposite direction to the trade. However, experienced traders can reliably use limit or market orders with these setups:</li>  
+        <li>Buying a bull spike in a strong bull breakout at the market or at the close of the bar, or on a limit order at or below the low of the prior bar (entering in spikes requires a wider stop and the spike happens quickly, so this combination is difficult for many traders).  </li> 
+        <li>Selling a bear spike in a strong bear breakout at the market or at the close of the bar, or on a limit order at or above the high of the prior bar (entering in spikes requires a wider stop and the spike happens quickly, so this combination is difficult for many traders).  </li> 
+        <li>Buying a bear breakout at around a measured move, if the breakout is not too strong—for example, if the range is about four points tall in the Emini, buying on a limit order at four points below the range, risking four points, and expecting a test of the breakout point. Only very experienced traders should consider this.  </li> 
+        <li>Selling a bull breakout at around a measured move, if the breakout is not too strong—for example, if the range is about four points tall in the Emini, selling on a limit order at four points above the range, risking four points, and expecting a test of the breakout point. Only very experienced traders should consider this.  </li> 
+        <li>Buying at or below a low 1 or 2 weak signal bar on a limit order in a possible new bull trend after a strong reversal or at the bottom of a trading range.  </li> 
+        <li>Shorting at or above a high 1 or 2 weak signal bar on a limit order in a possible new bear trend after a strong reversal or at the top of a trading range.  </li> 
+        <li>Buying at or below the prior bar on a limit order in a quiet bull flag at the moving average. </li> 
+     
       <ul style={styleList}>
         <li onClick={handleClick} data-value="60%">
           60%
