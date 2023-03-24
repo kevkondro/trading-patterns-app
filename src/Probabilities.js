@@ -74,7 +74,27 @@ export default function Probabilities() {
 
   return (
     <div>
-      <p></p>
+      <h1>Probability of success of 70 percent or better (reward has to be at least half as big as risk just to break even)</h1>
+      <p>
+        Scalps, but since most traders cannot consistently pick trades with a 70 percent chance of success, they should trade a scalp only if the reward is at least as large as the risk. 
+        For example, if you believe that a two-point stop is needed in the Emini, take the trade only if at least a two-point reward is reasonable.
+      </p>
+      <h1>Probability of success of 60 percent or better (reward has to be at least as big as risk to break even):</h1>
+      <p>
+        <li>Buying a high 2 pullback to the moving average in a bull trend. </li>
+        <li>Selling a low 2 pullback to the moving average in a bear trend. </li>
+        <li>Buying a wedge bull flag pullback in a bull trend.</li> 
+        <li>Selling a wedge bear flag pullback in a bear trend.</li> 
+        <li>Buying a breakout pullback from a breakout of a bull flag in a bull trend. </li>
+        <li>Selling a breakout pullback from a breakout of a bear flag in a bear trend.</li>
+        <li>Buying a high 1 pullback in a strong bull spike in a bull trend, but not after a buy climax. </li> 
+        <li>Selling a low 1 pullback in a strong bear spike in a bear trend, but not after a sell climax. </li> 
+        <li>Shorting at the top of a trading range, especially if it is a second entry. </li> 
+        <li>Buying at the bottom of a trading range, especially if it is a second entry. </li> 
+        <li>Trend reversals: </li> 
+        <li>After a strong break of the trend line, look for a reversal after a test of the trend's extreme where there is a good reversal signal bar. ‘Traders are looking to buy a higher low or a lower low at a bottom, or to short a higher high or a lower high ata top. </li> 
+        <li>Strong final flag reversal.</li> 
+      </p>
       <ul style={styleList}>
         <li onClick={handleClick} data-value="60%">
           60%
