@@ -74,47 +74,63 @@ export default function Probabilities() {
 
   return (
     <div>
-      <h1>Probability of success of 70 percent or better (reward has to be at least half as big as risk just to break even)</h1>
-      <p>
-        Scalps, but since most traders cannot consistently pick trades with a 70 percent chance of success, they should trade a scalp only if the reward is at least as large as the risk. 
-        For example, if you believe that a two-point stop is needed in the Emini, take the trade only if at least a two-point reward is reasonable.
-      </p>
-      <h1>Probability of success of 60 percent or better (reward has to be at least as big as risk to break even):</h1>
-   
-        <li>Buying a high 2 pullback to the moving average in a bull trend. </li>
-        <li>Selling a low 2 pullback to the moving average in a bear trend. </li>
-        <li>Buying a wedge bull flag pullback in a bull trend.</li> 
-        <li>Selling a wedge bear flag pullback in a bear trend.</li> 
-        <li>Buying a breakout pullback from a breakout of a bull flag in a bull trend. </li>
-        <li>Selling a breakout pullback from a breakout of a bear flag in a bear trend.</li>
-        <li>Buying a high 1 pullback in a strong bull spike in a bull trend, but not after a buy climax. </li> 
-        <li>Selling a low 1 pullback in a strong bear spike in a bear trend, but not after a sell climax. </li> 
-        <li>Shorting at the top of a trading range, especially if it is a second entry. </li> 
-        <li>Buying at the bottom of a trading range, especially if it is a second entry. </li> 
-        <li>Trend reversals: </li> 
-        <li>After a strong break of the trend line, look for a reversal after a test of the trend's extreme where there is a good reversal signal bar. ‘Traders are looking to buy a higher low or a lower low at a bottom, or to short a higher high or a lower high ata top. </li> 
-        <li>Strong final flag reversal.</li> 
-        <li>Buying a third or fourth push down in a bear stairs pattern for a test of the low of the prior push down.</li>  
-        <li>Selling a third or fourth push up in a bull stairs pattern for a test of the high of the prior push up.</li> 
-        <li>Entering using limit orders; this requires more experience reading charts, because the trader is entering in a market that is going in the opposite direction to the trade. However, experienced traders can reliably use limit or market orders with these setups:</li>  
-        <li>Buying a bull spike in a strong bull breakout at the market or at the close of the bar, or on a limit order at or below the low of the prior bar (entering in spikes requires a wider stop and the spike happens quickly, so this combination is difficult for many traders).  </li> 
-        <li>Selling a bear spike in a strong bear breakout at the market or at the close of the bar, or on a limit order at or above the high of the prior bar (entering in spikes requires a wider stop and the spike happens quickly, so this combination is difficult for many traders).  </li> 
-        <li>Buying a bear breakout at around a measured move, if the breakout is not too strong—for example, if the range is about four points tall in the Emini, buying on a limit order at four points below the range, risking four points, and expecting a test of the breakout point. Only very experienced traders should consider this.  </li> 
-        <li>Selling a bull breakout at around a measured move, if the breakout is not too strong—for example, if the range is about four points tall in the Emini, selling on a limit order at four points above the range, risking four points, and expecting a test of the breakout point. Only very experienced traders should consider this.  </li> 
-        <li>Buying at or below a low 1 or 2 weak signal bar on a limit order in a possible new bull trend after a strong reversal or at the bottom of a trading range.  </li> 
-        <li>Shorting at or above a high 1 or 2 weak signal bar on a limit order in a possible new bear trend after a strong reversal or at the top of a trading range.  </li> 
-        <li>Buying at or below the prior bar on a limit order in a quiet bull flag at the moving average. </li>
-        <li>Shorting at or above the prior bar on a limit order in a quiet bear flag at the moving average.  </li>
-        <li>Buying below a bull bar that breaks above a bull flag, anticipating a breakout pullback.  </li>
-        <li>Selling above a bear bar that breaks below a bear flag, anticipating a breakout pullback.  </li>
+      <div>
+        <h1>Probability of success of 70 percent or better (reward has to be at least half as big as risk just to break even)</h1>
+        <ul>
+          <li>Scalps, but since most traders cannot consistently pick trades with a 70 percent chance of success, they should trade a scalp only if the reward is at least as large as the risk.
+            For example, if you believe that a two-point stop is needed in the Emini, take the trade only if at least a two-point reward is reasonable.</li>
+        </ul>
 
-        <h1>Probability of success of about 50 percent (reward has to be at least 50 percent greater than risk to break even): </h1>
-        
+        <h1>Probability of success of 60 percent or better (reward has to be at least as big as risk to break even):</h1>
+        <ul>
+          <li>Buying a high 2 pullback to the moving average in a bull trend. </li>
+          <li>Selling a low 2 pullback to the moving average in a bear trend. </li>
+          <li>Buying a wedge bull flag pullback in a bull trend.</li>
+          <li>Selling a wedge bear flag pullback in a bear trend.</li>
+          <li>Buying a breakout pullback from a breakout of a bull flag in a bull trend.</li>
+          <li>Selling a breakout pullback from a breakout of a bear flag in a bear trend.</li>
+          <li>Buying a high 1 pullback in a strong bull spike in a bull trend, but not after a buy climax.</li>
+          <li>Selling a low 1 pullback in a strong bear spike in a bear trend, but not after a sell climax.</li>
+          <li>Shorting at the top of a trading range, especially if it is a second entry.</li>
+          <li>Buying at the bottom of a trading range, especially if it is a second entry.</li>
+          <li>Trend reversals: </li>
+          <li>After a strong break of the trend line, look for a reversal after a test of the trend's extreme where there is a good reversal signal bar. ‘Traders are looking to buy a higher low or a lower low at a bottom, or to short a higher high or a lower high ata top. </li>
+          <li>Strong final flag reversal.</li>
+          <li>Buying a third or fourth push down in a bear stairs pattern for a test of the low of the prior push down.</li>
+          <li>Selling a third or fourth push up in a bull stairs pattern for a test of the high of the prior push up.</li>
+          <li>Entering using limit orders; this requires more experience reading charts, because the trader is entering in a market that is going in the opposite direction to the trade. However, experienced traders can reliably use limit or market orders with these setups:</li>
+          <li>Buying a bull spike in a strong bull breakout at the market or at the close of the bar, or on a limit order at or below the low of the prior bar (entering in spikes requires a wider stop and the spike happens quickly, so this combination is difficult for many traders).  </li>
+          <li>Selling a bear spike in a strong bear breakout at the market or at the close of the bar, or on a limit order at or above the high of the prior bar (entering in spikes requires a wider stop and the spike happens quickly, so this combination is difficult for many traders).  </li>
+          <li>Buying a bear breakout at around a measured move, if the breakout is not too strong—for example, if the range is about four points tall in the Emini, buying on a limit order at four points below the range, risking four points, and expecting a test of the breakout point. Only very experienced traders should consider this.  </li>
+          <li>Selling a bull breakout at around a measured move, if the breakout is not too strong—for example, if the range is about four points tall in the Emini, selling on a limit order at four points above the range, risking four points, and expecting a test of the breakout point. Only very experienced traders should consider this.  </li>
+          <li>Buying at or below a low 1 or 2 weak signal bar on a limit order in a possible new bull trend after a strong reversal or at the bottom of a trading range.</li>
+          <li>Shorting at or above a high 1 or 2 weak signal bar on a limit order in a possible new bear trend after a strong reversal or at the top of a trading range.</li>
+          <li>Buying at or below the prior bar on a limit order in a quiet bull flag at the moving average.</li>
+          <li>Shorting at or above the prior bar on a limit order in a quiet bear flag at the moving average.</li>
+          <li>Buying below a bull bar that breaks above a bull flag, anticipating a breakout pullback.</li>
+          <li>Selling above a bear bar that breaks below a bear flag, anticipating a breakout pullback.</li>
+        </ul>
+        <h1>Probability of success of about 50 percent (reward has to be at least 50 percent greater than risk to break even)</h1>
+
         <li> The initial entry when scaling into a position in a trading range.  </li>
-        <li>Buying or selling in a tight trading range, expecting a breakout that would result in a profit that is several times greater than your risk. </li>
-        <li>Shorting a lower high in a trading range when the trend might be reversing down, or buying a higher low when the trend might be reversing up. Since the entry is in the middle of the trading range, the probability is 50 percent, but the reward is usually twice the risk. </li>
-        <h1>Probability of success of 40 percent or less (reward has to be at least twice the size of risk): </h1>
-     
+        <ul>
+          <li>Buying or selling in a tight trading range, expecting a breakout that would result in a profit that is several times greater than your risk. </li>
+          <li>Shorting a lower high in a trading range when the trend might be reversing down, or buying a higher low when the trend might be reversing up. Since the entry is in the middle of the trading range, the probability is 50 percent, but the reward is usually twice the risk. </li>
+        </ul>
+        <h1>Probability of success of 40 percent or less (reward has to be at least twice the size of risk)</h1>
+        <ul>
+          <li>Buying at the bottom of a bear trend or shorting at the top of bull trend where the reversal trade allows for a small risk and a very large reward— for example, shorting a rally to a clear resistance level, entering on a limit order at one tick below the resistance, and having a protective stop at one or two ticks above it. There are several examples in the chapter on entering on limit orders.</li>
+        </ul>
+        <h1>Probability of success of 40 percent to 60 percent depending on circumstances (reward has to be at least twice the size of risk to break even when the probability is only 40 percent) </h1>
+
+        <ul>
+          <li>Buying a breakout test in a bull trend on a limit order as the market is falling, or shorting a breakout test in a bear trend on a limit order as the market is rising.</li>
+          <li>Buying below a low 1 or 2 signal bar, even if it is not weak, on a limit order (a potential higher low) in a new bull trend or at the bottom of a trading range, or shorting above a high 1 or 2 signal bar, even if it is not weak, on a limit order (a potential lower high) in a new bear trend or at the top of a trading range. For example, if the market might be completing a wedge reversal top in a bull trend and pulls back for a bar or a few bars,
+            shorting above the high 1and high 2 signal bars is shorting in what you hope is a new bear swing</li>
+          <li>Fading magnets, like shorting at a measured move up in a bull trend or buying at ameasured move down in a bear trend.</li>
+          <li>Buying a sell climax around the close of an unusually large bear trend bar in an area of support in an overdone bear trend (climaxes are discussed in book 3).</li>
+          <li>Selling a buy climax around the close of an unusually large bull trend bar in an area of resistance in an overdone bull trend.</li>
+        </ul></div>
       <ul style={styleList}>
         <li onClick={handleClick} data-value="60%">
           60%
