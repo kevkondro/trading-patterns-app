@@ -97,7 +97,7 @@ export default function ChartSearch() {
   };
 
   //google ID
-  function manipulateValue(src) {
+function manipulateValue(src) {
     // Regular expression pattern to match numbers in the input value
     const regexPattern = /https:\/\/drive\.google\.com\/file\/d\/(.+)\/view\?usp=share_link/;
 
