@@ -18,7 +18,7 @@ export default function Tabs() {
   return (
     <div>
       <MuiTabs value={activeTab} onChange={handleTabChange}>
-        <MuiTab label="Chart Search" />
+        <MuiTab label="Search" />
         <MuiTab label="Rules" />
         <MuiTab label="Probabilities" />
         <MuiTab label="Notes" />
