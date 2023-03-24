@@ -95,8 +95,8 @@ export default function Probabilities() {
           <li>Shorting at the top of a trading range, especially if it is a second entry.</li>
           <li>Buying at the bottom of a trading range, especially if it is a second entry.</li>
           <p>Trend reversals: </p>
-          <li>After a strong break of the trend line, look for a reversal after a test of the trend's extreme where there is a good reversal signal bar. ‘Traders are looking to buy a higher low or a lower low at a bottom, or to short a higher high or a lower high ata top. </li>
-          <li>Strong final flag reversal.</li>
+          <li style={{ paddingLeft: '20px' }}>After a strong break of the trend line, look for a reversal after a test of the trend's extreme where there is a good reversal signal bar. ‘Traders are looking to buy a higher low or a lower low at a bottom, or to short a higher high or a lower high ata top. </li>
+          <li style={{ paddingLeft: '20px' }}>Strong final flag reversal.</li>
           <p></p>
           <li>Buying a third or fourth push down in a bear stairs pattern for a test of the low of the prior push down.</li>
           <li>Selling a third or fourth push up in a bull stairs pattern for a test of the high of the prior push up.</li>
