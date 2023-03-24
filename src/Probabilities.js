@@ -103,7 +103,17 @@ export default function Probabilities() {
         <li>Selling a bull breakout at around a measured move, if the breakout is not too strong—for example, if the range is about four points tall in the Emini, selling on a limit order at four points above the range, risking four points, and expecting a test of the breakout point. Only very experienced traders should consider this.  </li> 
         <li>Buying at or below a low 1 or 2 weak signal bar on a limit order in a possible new bull trend after a strong reversal or at the bottom of a trading range.  </li> 
         <li>Shorting at or above a high 1 or 2 weak signal bar on a limit order in a possible new bear trend after a strong reversal or at the top of a trading range.  </li> 
-        <li>Buying at or below the prior bar on a limit order in a quiet bull flag at the moving average. </li> 
+        <li>Buying at or below the prior bar on a limit order in a quiet bull flag at the moving average. </li>
+        <li>Shorting at or above the prior bar on a limit order in a quiet bear flag at the moving average.  </li>
+        <li>Buying below a bull bar that breaks above a bull flag, anticipating a breakout pullback.  </li>
+        <li>Selling above a bear bar that breaks below a bear flag, anticipating a breakout pullback.  </li>
+
+        <h1>Probability of success of about 50 percent (reward has to be at least 50 percent greater than risk to break even): </h1>
+        
+        <li> The initial entry when scaling into a position in a trading range.  </li>
+        <li>Buying or selling in a tight trading range, expecting a breakout that would result in a profit that is several times greater than your risk. </li>
+        <li>Shorting a lower high in a trading range when the trend might be reversing down, or buying a higher low when the trend might be reversing up. Since the entry is in the middle of the trading range, the probability is 50 percent, but the reward is usually twice the risk. </li>
+        <h1>Probability of success of 40 percent or less (reward has to be at least twice the size of risk): </h1>
      
       <ul style={styleList}>
         <li onClick={handleClick} data-value="60%">
