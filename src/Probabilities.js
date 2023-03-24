@@ -97,9 +97,10 @@ export default function Probabilities() {
           <p>Trend reversals: </p>
           <li>After a strong break of the trend line, look for a reversal after a test of the trend's extreme where there is a good reversal signal bar. ‘Traders are looking to buy a higher low or a lower low at a bottom, or to short a higher high or a lower high ata top. </li>
           <li>Strong final flag reversal.</li>
+          <p></p>
           <li>Buying a third or fourth push down in a bear stairs pattern for a test of the low of the prior push down.</li>
           <li>Selling a third or fourth push up in a bull stairs pattern for a test of the high of the prior push up.</li>
-          <li>Entering using limit orders; this requires more experience reading charts, because the trader is entering in a market that is going in the opposite direction to the trade. However, experienced traders can reliably use limit or market orders with these setups:</li>
+          <p>Entering using limit orders; this requires more experience reading charts, because the trader is entering in a market that is going in the opposite direction to the trade. However, experienced traders can reliably use limit or market orders with these setups:</p>
           <li>Buying a bull spike in a strong bull breakout at the market or at the close of the bar, or on a limit order at or below the low of the prior bar (entering in spikes requires a wider stop and the spike happens quickly, so this combination is difficult for many traders).  </li>
           <li>Selling a bear spike in a strong bear breakout at the market or at the close of the bar, or on a limit order at or above the high of the prior bar (entering in spikes requires a wider stop and the spike happens quickly, so this combination is difficult for many traders).  </li>
           <li>Buying a bear breakout at around a measured move, if the breakout is not too strong—for example, if the range is about four points tall in the Emini, buying on a limit order at four points below the range, risking four points, and expecting a test of the breakout point. Only very experienced traders should consider this.  </li>
