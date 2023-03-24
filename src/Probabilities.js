@@ -11,7 +11,8 @@ export default function Probabilities() {
     fontFamily: "Droid Sans"
   };
   const liStyle = {
-    padding: ".5em"
+    padding: ".5em",
+    fontFamily: "Droid Sans"
   };
   function manipulateValue(src) {
     // Regular expression pattern to match numbers in the input value
@@ -74,14 +75,14 @@ export default function Probabilities() {
 
   return (
     <div>
-      <div>
-        <h1>Probability of success of 70 percent or better (reward has to be at least half as big as risk just to break even)</h1>
+      <div style={liStyle}>
+        <h2>Probability of success of 70 percent or better (reward has to be at least half as big as risk just to break even)</h2>
         <ul>
           <li>Scalps, but since most traders cannot consistently pick trades with a 70 percent chance of success, they should trade a scalp only if the reward is at least as large as the risk.
             For example, if you believe that a two-point stop is needed in the Emini, take the trade only if at least a two-point reward is reasonable.</li>
         </ul>
 
-        <h1>Probability of success of 60 percent or better (reward has to be at least as big as risk to break even):</h1>
+        <h2>Probability of success of 60 percent or better (1:1):</h2>
         <ul>
           <li>Buying a high 2 pullback to the moving average in a bull trend. </li>
           <li>Selling a low 2 pullback to the moving average in a bear trend. </li>
@@ -93,7 +94,7 @@ export default function Probabilities() {
           <li>Selling a low 1 pullback in a strong bear spike in a bear trend, but not after a sell climax.</li>
           <li>Shorting at the top of a trading range, especially if it is a second entry.</li>
           <li>Buying at the bottom of a trading range, especially if it is a second entry.</li>
-          <li>Trend reversals: </li>
+          <p>Trend reversals: </p>
           <li>After a strong break of the trend line, look for a reversal after a test of the trend's extreme where there is a good reversal signal bar. ‘Traders are looking to buy a higher low or a lower low at a bottom, or to short a higher high or a lower high ata top. </li>
           <li>Strong final flag reversal.</li>
           <li>Buying a third or fourth push down in a bear stairs pattern for a test of the low of the prior push down.</li>
@@ -110,18 +111,18 @@ export default function Probabilities() {
           <li>Buying below a bull bar that breaks above a bull flag, anticipating a breakout pullback.</li>
           <li>Selling above a bear bar that breaks below a bear flag, anticipating a breakout pullback.</li>
         </ul>
-        <h1>Probability of success of about 50 percent (reward has to be at least 50 percent greater than risk to break even)</h1>
-
-        <li> The initial entry when scaling into a position in a trading range.  </li>
+        <h2>Probability of success of about 50 percent (1:1.5)</h2>
         <ul>
+          <li> The initial entry when scaling into a position in a trading range.  </li>
+
           <li>Buying or selling in a tight trading range, expecting a breakout that would result in a profit that is several times greater than your risk. </li>
           <li>Shorting a lower high in a trading range when the trend might be reversing down, or buying a higher low when the trend might be reversing up. Since the entry is in the middle of the trading range, the probability is 50 percent, but the reward is usually twice the risk. </li>
         </ul>
-        <h1>Probability of success of 40 percent or less (reward has to be at least twice the size of risk)</h1>
+        <h2>Probability of success of 40 percent or less (1:2)</h2>
         <ul>
           <li>Buying at the bottom of a bear trend or shorting at the top of bull trend where the reversal trade allows for a small risk and a very large reward— for example, shorting a rally to a clear resistance level, entering on a limit order at one tick below the resistance, and having a protective stop at one or two ticks above it. There are several examples in the chapter on entering on limit orders.</li>
         </ul>
-        <h1>Probability of success of 40 percent to 60 percent depending on circumstances (reward has to be at least twice the size of risk to break even when the probability is only 40 percent) </h1>
+        <h2>Probability of success of 40 percent to 60 percent depending on circumstances (1:2) </h2>
 
         <ul>
           <li>Buying a breakout test in a bull trend on a limit order as the market is falling, or shorting a breakout test in a bear trend on a limit order as the market is rising.</li>
@@ -130,7 +131,7 @@ export default function Probabilities() {
           <li>Fading magnets, like shorting at a measured move up in a bull trend or buying at ameasured move down in a bear trend.</li>
           <li>Buying a sell climax around the close of an unusually large bear trend bar in an area of support in an overdone bear trend (climaxes are discussed in book 3).</li>
           <li>Selling a buy climax around the close of an unusually large bull trend bar in an area of resistance in an overdone bull trend.</li>
-        </ul></div>
+        </ul></div>{/*
       <ul style={styleList}>
         <li onClick={handleClick} data-value="60%">
           60%
@@ -140,7 +141,7 @@ export default function Probabilities() {
           70%
         </li>
       </ul>
-      {showImgMap && <ImgMap key_index={currentKeyIndex} />}
+  {showImgMap && <ImgMap key_index={currentKeyIndex} />}*/}
     </div>
   );
 }
