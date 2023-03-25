@@ -20,8 +20,8 @@ export default function Rules() {
           probability and set profit / loss levels accordingly.
         </li>
         <li style={liStyle}>
-          After entering a trade monitor for bad signals and close the trade
-          early if necessary, not letting the trade go for break or loss.
+          When scalping monitor for bad signals and close the trade
+          early if necessary, not letting the trade go for breakeven or loss.
         </li>
         <li style={liStyle}>
           Check left side and evaluate market cycle: spike, channel, or range?

@@ -2,3 +2,6 @@
   font-family: sans-serif;
   text-align: center;
 }
+.my-list li {
+  margin: 10px 0;
+}

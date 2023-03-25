@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import prob_data from './prob.json';
-
-
-
+import './styles.css';
 
 export default function Probabilities() {
+
   const styleList = {
     fontSize: "20px",
     letterSpacing: "0.015em",
@@ -12,7 +11,9 @@ export default function Probabilities() {
   };
   const liStyle = {
     padding: ".5em",
-    fontFamily: "Droid Sans"
+    fontFamily: "Droid Sans",
+    margin: "10px 0",
+    padding: "10px 0"
   };
   function manipulateValue(src) {
     // Regular expression pattern to match numbers in the input value
@@ -77,13 +78,13 @@ export default function Probabilities() {
     <div>
       <div style={liStyle}>
         <h2>Probability of success of 70 percent or better (reward has to be at least half as big as risk just to break even)</h2>
-        <ul>
+        <ul className="my-list">
           <li>Scalps, but since most traders cannot consistently pick trades with a 70 percent chance of success, they should trade a scalp only if the reward is at least as large as the risk.
             For example, if you believe that a two-point stop is needed in the Emini, take the trade only if at least a two-point reward is reasonable.</li>
         </ul>
 
         <h2>Probability of success of 60 percent or better (1:1):</h2>
-        <ul>
+        <ul className="my-list">
           <li>Buying a high 2 pullback to the moving average in a bull trend. </li>
           <li>Selling a low 2 pullback to the moving average in a bear trend. </li>
           <li>Buying a wedge bull flag pullback in a bull trend.</li>
@@ -94,12 +95,12 @@ export default function Probabilities() {
           <li>Selling a low 1 pullback in a strong bear spike in a bear trend, but not after a sell climax.</li>
           <li>Shorting at the top of a trading range, especially if it is a second entry.</li>
           <li>Buying at the bottom of a trading range, especially if it is a second entry.</li>
-          <p>Trend reversals: </p>
+          <p><strong>Trend reversals: </strong></p>
           <li style={{ paddingLeft: '20px' }}>After a strong break of the trend line, look for a reversal after a test of the trend's extreme where there is a good reversal signal bar. ‘Traders are looking to buy a higher low or a lower low at a bottom, or to short a higher high or a lower high ata top. </li>
           <li style={{ paddingLeft: '20px' }}>Strong final flag reversal.</li>
           <li style={{ paddingLeft: '20px' }}>Buying a third or fourth push down in a bear stairs pattern for a test of the low of the prior push down.</li>
           <li style={{ paddingLeft: '20px' }}>Selling a third or fourth push up in a bull stairs pattern for a test of the high of the prior push up.</li>
-          <p>Entering using limit orders; this requires more experience reading charts, because the trader is entering in a market that is going in the opposite direction to the trade. However, experienced traders can reliably use limit or market orders with these setups:</p>
+          <p><strong>Entering using limit orders;</strong> this requires more experience reading charts, because the trader is entering in a market that is going in the opposite direction to the trade. However, experienced traders can reliably use limit or market orders with these setups:</p>
           <li style={{ paddingLeft: '20px' }}>Buying a bull spike in a strong bull breakout at the market or at the close of the bar, or on a limit order at or below the low of the prior bar (entering in spikes requires a wider stop and the spike happens quickly, so this combination is difficult for many traders).  </li>
           <li style={{ paddingLeft: '20px' }}>Selling a bear spike in a strong bear breakout at the market or at the close of the bar, or on a limit order at or above the high of the prior bar (entering in spikes requires a wider stop and the spike happens quickly, so this combination is difficult for many traders).  </li>
           <li style={{ paddingLeft: '20px' }}>Buying a bear breakout at around a measured move, if the breakout is not too strong—for example, if the range is about four points tall in the Emini, buying on a limit order at four points below the range, risking four points, and expecting a test of the breakout point. Only very experienced traders should consider this.  </li>
@@ -112,19 +113,19 @@ export default function Probabilities() {
           <li style={{ paddingLeft: '20px' }}>Selling above a bear bar that breaks below a bear flag, anticipating a breakout pullback.</li>
         </ul>
         <h2>Probability of success of about 50 percent (1:1.5)</h2>
-        <ul>
+        <ul className="my-list">
           <li> The initial entry when scaling into a position in a trading range.  </li>
 
           <li>Buying or selling in a tight trading range, expecting a breakout that would result in a profit that is several times greater than your risk. </li>
           <li>Shorting a lower high in a trading range when the trend might be reversing down, or buying a higher low when the trend might be reversing up. Since the entry is in the middle of the trading range, the probability is 50 percent, but the reward is usually twice the risk. </li>
         </ul>
         <h2>Probability of success of 40 percent or less (1:2)</h2>
-        <ul>
+        <ul className="my-list">
           <li>Buying at the bottom of a bear trend or shorting at the top of bull trend where the reversal trade allows for a small risk and a very large reward— for example, shorting a rally to a clear resistance level, entering on a limit order at one tick below the resistance, and having a protective stop at one or two ticks above it. There are several examples in the chapter on entering on limit orders.</li>
         </ul>
         <h2>Probability of success of 40 percent to 60 percent depending on circumstances (1:2) </h2>
 
-        <ul>
+        <ul className="my-list">
           <li>Buying a breakout test in a bull trend on a limit order as the market is falling, or shorting a breakout test in a bear trend on a limit order as the market is rising.</li>
           <li>Buying below a low 1 or 2 signal bar, even if it is not weak, on a limit order (a potential higher low) in a new bull trend or at the bottom of a trading range, or shorting above a high 1 or 2 signal bar, even if it is not weak, on a limit order (a potential lower high) in a new bear trend or at the top of a trading range. For example, if the market might be completing a wedge reversal top in a bull trend and pulls back for a bar or a few bars,
             shorting above the high 1and high 2 signal bars is shorting in what you hope is a new bear swing</li>
