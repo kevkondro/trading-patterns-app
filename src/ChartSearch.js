@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "4px",
     fontSize: "16px",
     fontWeight: "normal",
-    width:"50%",
+    width:"75%",
     "&:focus": {
       outline: "none",
       border: "2px solid " + theme.palette.primary.main,
