@@ -97,7 +97,7 @@ export default function ChartSearch() {
   };
 
   //google ID
-function manipulateValue(src) {
+  function manipulateValue(src) {
     // Regular expression pattern to match numbers in the input value
     const regexPattern = /https:\/\/drive\.google\.com\/file\/d\/(.+)\/view\?usp=share_link/;
 
@@ -114,7 +114,7 @@ function manipulateValue(src) {
     // Render the manipulated value in a new div
     return FinalmanipulatedValue;
   }
-
+  const SubString = ".png"
   return (
     <div>
       <p></p>
@@ -151,18 +151,22 @@ function manipulateValue(src) {
         <p></p>
         {filteredProducts.map((product, index) => (
           <div style={styleDesc} key={product.name}>
-            {product.name.trimEnd()} - {product.book}
+            {product.name.trimEnd().replace(SubString, '')} - {product.book}
             <p></p>
             <img
               width="100%"
-              alt={product.name.trimEnd()}
+              alt={product.name.trimEnd().replace(SubString, '')}
               src={
-                product.src.includes("http")
-                  ? "https://drive.google.com/uc?id=" +
-                    manipulateValue(product.src)
-                  : "https://drive.google.com/uc?id=" + product.src
+                product.src.includes('http')
+                  ? 'https://drive.google.com/uc?id=' + manipulateValue(product.src)
+                  : product.src.includes('https://')
+                    ? 'https://drive.google.com/uc?id=' + manipulateValue(product.src)
+                    : !product.src.includes('http')
+                      ? process.env.PUBLIC_URL+'/reversals/' + product.src
+                      : ''
               }
             />
+
             <p></p>
           </div>
         ))}
