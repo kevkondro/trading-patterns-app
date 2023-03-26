@@ -2,8 +2,56 @@ import React, { useState, useEffect } from "react";
 import data from "./data.json";
 import WebFont from "webfontloader";
 import { Tab, Tabs } from "@material-ui/core";
-
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles((theme) => ({
+  label: {
+    fontFamily: "Droid Sans",
+  },
+  select: {
+    margin:"5px",
+    padding: "10px",
+    backgroundColor: "#fff",
+    border: "1px solid #ccc",
+    borderRadius: "4px",
+    fontSize: "16px",
+    fontWeight: "normal",
+    "&:focus": {
+      outline: "none",
+      border: "2px solid " + theme.palette.primary.main,
+    },
+  },
+  input: {
+    padding: "10px",
+    backgroundColor: "#fff",
+    border: "1px solid #ccc",
+    borderRadius: "4px",
+    fontSize: "16px",
+    fontWeight: "normal",
+    width:"50%",
+    "&:focus": {
+      outline: "none",
+      border: "2px solid " + theme.palette.primary.main,
+    
+    },
+  },
+  button: {
+    padding: "10px",
+    width:"200px",
+    backgroundColor: theme.palette.primary.main,
+    color: "#fff",
+    borderRadius: "4px",
+    fontSize: "16px",
+    fontWeight: "normal",
+    border: "none",
+    cursor: "pointer",
+    "&:hover": {
+      backgroundColor: theme.palette.primary.dark,
+    },
+  },
+}));
 export default function ChartSearch() {
+  
+  
   const [searchResults, setSearchResults] = useState([]);
   // Perform search when component mounts
   useEffect(() => {
@@ -115,37 +163,39 @@ export default function ChartSearch() {
     return FinalmanipulatedValue;
   }
   const SubString = [".png", ".jpeg", ".jpg"]
+  const classes = useStyles();
 
   return (
     <div>
       <p></p>
       <div>
-        <label style={{ fontFamily: "Droid Sans" }} htmlFor="category-select">
-          Filter by book:{" "}
-        </label>
-        <select
-          style={styleSelect}
-          id="category-select"
-          value={selectedCategory}
-          onChange={handleCategoryChange}
-        >
-          {categories.map((category, index) => (
-            <option key={index} value={category}>
-              {category}
-            </option>
-          ))}
-        </select>
-        <p></p>
-        <input
-          style={styleInput}
-          type="text"
-          placeholder="Search by name"
-          value={searchTerm}
-          onChange={handleSearchChange}
-        />
-      </div>
+  <label className={classes.label} htmlFor="category-select">
+    Filter by book:{" "}
+  </label>
+  <select
+    className={classes.select}
+    id="category-select"
+    value={selectedCategory}
+    onChange={handleCategoryChange}
+  >
+    {categories.map((category, index) => (
+      <option key={index} value={category}>
+        {category}
+      </option>
+    ))}
+  </select>
+  <p></p>
+  <input
+    className={classes.input}
+    type="text"
+    placeholder="Search by name"
+    value={searchTerm}
+    onChange={handleSearchChange}
+  />
+</div>
+
       <p></p>
-      <button style={styleBtn} onClick={handleClick}>
+      <button className={classes.button} onClick={handleClick}>
         Clear Results
       </button>
       <div>
