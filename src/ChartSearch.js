@@ -114,7 +114,8 @@ export default function ChartSearch() {
     // Render the manipulated value in a new div
     return FinalmanipulatedValue;
   }
-  const SubString = ".png" || ".jpeg" || ".jpg"
+  const SubString = [".png", ".jpeg", ".jpg"]
+
   return (
     <div>
       <p></p>
@@ -151,7 +152,9 @@ export default function ChartSearch() {
         <p></p>
         {filteredProducts.map((product, index) => (
           <div style={styleDesc} key={product.name}>
-            {product.name.trimEnd().replace(SubString, '')} - {product.book}
+            {SubString.some((substring) => product.name.trimEnd().includes(substring))
+              ? product.name.trimEnd().replace(new RegExp(SubString.join("|"), "g"), "")
+              : product.name.trimEnd()} - {product.book}
             <p></p>
             <img
               width="100%"
