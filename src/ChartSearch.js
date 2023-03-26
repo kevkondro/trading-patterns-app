@@ -114,7 +114,7 @@ export default function ChartSearch() {
     // Render the manipulated value in a new div
     return FinalmanipulatedValue;
   }
-  const SubString = ".png"
+  const SubString = ".png" || ".jpeg" || ".jpg"
   return (
     <div>
       <p></p>
@@ -157,13 +157,14 @@ export default function ChartSearch() {
               width="100%"
               alt={product.name.trimEnd().replace(SubString, '')}
               src={
-                product.src.includes('http')
-                  ? 'https://drive.google.com/uc?id=' + manipulateValue(product.src)
-                  : product.src.includes('https://')
-                    ? 'https://drive.google.com/uc?id=' + manipulateValue(product.src)
-                    : !product.src.includes('http')
-                      ? process.env.PUBLIC_URL+'/reversals/' + product.src
+                product.book === "Trends"
+                  ? process.env.PUBLIC_URL + '/trends/' + product.src
+                  : product.book === "Reversals"
+                    ? process.env.PUBLIC_URL + '/reversals/' + product.src
+                    : product.book === "Ranges"
+                      ? process.env.PUBLIC_URL + '/ranges/' + product.src
                       : ''
+
               }
             />
 
