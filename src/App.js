@@ -8,7 +8,7 @@ function App() {
   }, []);
   return (
     <div>
-      <h1 style={{ fontFamily: "Droid Sans" }}>Trading Charts APP</h1>
+      <h1 style={{ fontFamily: "Droid Sans" }}>Trading Patterns</h1>
       <Tabs />
     </div>
   );
