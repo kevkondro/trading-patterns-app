@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    document.title = "Trading Charts APP";
+    document.title = "Trading Patterns";
   }, []);
   return (
     <div>
