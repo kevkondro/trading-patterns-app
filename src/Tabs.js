@@ -1,5 +1,6 @@
 import React, { lazy, Suspense, useState } from "react";
 import { Tabs as MuiTabs, Tab as MuiTab } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
 // Define separate components for each tab
 const Tab1 = lazy(() => import("./ChartSearch.js"));
@@ -7,8 +8,17 @@ const Tab2 = lazy(() => import("./Rules.js"));
 const Tab3 = lazy(() => import("./Probabilities.js"));
 const Tab4 = lazy(() => import("./Notes.js"));
 const Tab5 = lazy(() => import("./DataDisplay.js"));
-
+const useStyles = makeStyles({
+  tabs: {
+    width:"10%",
+    margin: "1.5px",
+    fontSize: "14px",
+    padding: "0px",
+  },
+});
 export default function Tabs() {
+  
+  const classes = useStyles();
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabChange = (event, newValue) => {
@@ -17,12 +27,20 @@ export default function Tabs() {
 
   return (
     <div>
-      <MuiTabs value={activeTab} onChange={handleTabChange}>
-        <MuiTab label="Search" />
-        <MuiTab label="Rules" />
-        <MuiTab label="Probabilities" />
-        <MuiTab label="Notes" />
-        <MuiTab label="Data" />
+      <MuiTabs value={activeTab} onChange={handleTabChange}
+        // add custom styles to adjust for smaller screens
+        style={{
+          margin: "0px",
+          // reduce font size for smaller screens
+          fontSize: "14px",
+          // reduce padding for smaller screens
+          padding: "0px",
+        }}>
+        <MuiTab label="Search" className={classes.tabs}/>
+        <MuiTab label="Rules" className={classes.tabs}/>
+        <MuiTab label="Probs" className={classes.tabs}/>
+        <MuiTab label="Notes" className={classes.tabs}/>
+        <MuiTab label="Data" className={classes.tabs}/>
       </MuiTabs>
       <div>
         <Suspense fallback={<div>Loading...</div>}>
