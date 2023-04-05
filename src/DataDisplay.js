@@ -31,7 +31,7 @@ function DataDisplay() {
   };
 
   if (data.length === 0) {
-    return <p>No data to display.</p>;
+    return <p>Loading...</p>;
   }
 
   const targetRow = 0; // index of the target row
