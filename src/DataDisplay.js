@@ -45,7 +45,7 @@ function DataDisplay() {
     {data.slice(0, 5).map((row, rowIndex) => (
       <tr key={rowIndex}>
         {row.map((cell, columnIndex) => {
-          const targetCell = rowIndex === 0 && columnIndex === 1;
+          const targetCell = rowIndex === targetRow && columnIndex === targetColumn;
           const cellValue = targetCell ? parseFloat(cell.replace('$', '')) : cell;
           const isPositive = cellValue > 0;
           const cellStyles = targetCell
@@ -53,7 +53,7 @@ function DataDisplay() {
             : {};
           return (
             <td key={`${rowIndex}-${columnIndex}`} style={{ ...cellStyle, ...cellStyles }}>
-              {"$"+cellValue}
+              {cellValue}
             </td>
           );
         })}
