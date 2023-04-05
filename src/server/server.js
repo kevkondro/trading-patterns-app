@@ -39,9 +39,11 @@ app.get("/data", async (req, res) => {
     const sheets = google.sheets({ version: 'v4', auth: client });
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: '1wzzOgKLx3ox6HPBSQf62Ukf63KG8MXtgwWgpm_4dltk',
-      range: 'Result estimation!A2:E',
+      range: 'Result estimation!A:B',
     });
     const data = response.data.values;
+    // const header = response.data.values[0];
+    // console.log(header);
     res.json(data);
   } catch (error) {
     console.error(error);
