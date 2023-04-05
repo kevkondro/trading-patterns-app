@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import prob_data from './prob.json';
 import './styles.css';
 
 export default function Probabilities() {
@@ -32,23 +31,6 @@ export default function Probabilities() {
     // Render the manipulated value in a new div
     return FinalmanipulatedValue;
   }
-
-  const ImgMap = ({ key_index }) => {
-    const key = Object.keys(prob_data)[parseInt(key_index)];
-    const images = prob_data[key];
-
-    return (
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        {images.map((img, index) => (
-          <img
-            key={index}
-            src={`https://drive.google.com/uc?id=${manipulateValue(img.src)}`}
-            style={{ margin: '5px', width: '600px', height: 'auto' }}
-          />
-        ))}
-      </div>
-    );
-  };
 
   const [showImgMap, setShowImgMap] = useState(false);
   const [currentKeyIndex, setCurrentKeyIndex] = useState(-1);
