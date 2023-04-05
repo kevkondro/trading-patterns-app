@@ -42,7 +42,7 @@ function DataDisplay() {
       <h2>Performance</h2>
       <table>
   <tbody>
-    {data.slice(0, 4).map((row, rowIndex) => (
+    {data.slice(0, 5).map((row, rowIndex) => (
       <tr key={rowIndex}>
         {row.map((cell, columnIndex) => {
           const targetCell = rowIndex === 0 && columnIndex === 1;
@@ -53,7 +53,7 @@ function DataDisplay() {
             : {};
           return (
             <td key={`${rowIndex}-${columnIndex}`} style={{ ...cellStyle, ...cellStyles }}>
-              {cellValue}
+              {"$"+cellValue}
             </td>
           );
         })}
