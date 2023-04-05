@@ -13,7 +13,7 @@ function DataDisplay() {
       });
   }, []);
 
-  console.log(data)
+  // console.log(data)
 
   const cellStyle = {
     width: "80%",
@@ -34,19 +34,33 @@ function DataDisplay() {
     return <p>No data to display.</p>;
   }
 
+  const targetRow = 0; // index of the target row
+  const targetColumn = 1; // index of the target column
+
   return (
     <div style={divStyle}>
       <h2>Performance</h2>
       <table>
-        <tbody>
-        {data.slice(0, 4).map((row, index) => (
-  <tr key={index}>
-    <td style={cellStyle}>{row[0]}</td>
-    <td style={cellStyle}>{row[1]}</td>
-  </tr>
-))}
-        </tbody>
-      </table>
+  <tbody>
+    {data.slice(0, 4).map((row, rowIndex) => (
+      <tr key={rowIndex}>
+        {row.map((cell, columnIndex) => {
+          const targetCell = rowIndex === 0 && columnIndex === 1;
+          const cellValue = targetCell ? parseFloat(cell.replace('$', '')) : cell;
+          const isPositive = cellValue > 0;
+          const cellStyles = targetCell
+            ? { fontWeight: 'bold', ...(isPositive ? { color: 'green' } : { color: 'red' }) }
+            : {};
+          return (
+            <td key={`${rowIndex}-${columnIndex}`} style={{ ...cellStyle, ...cellStyles }}>
+              {cellValue}
+            </td>
+          );
+        })}
+      </tr>
+    ))}
+  </tbody>
+</table>
     </div>
   );
 }
