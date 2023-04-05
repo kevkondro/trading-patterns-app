@@ -5,7 +5,7 @@ function DataDisplay() {
   const [header, setHeader] = useState([]);
 
   useEffect(() => {
-    fetch("https://trading-patterns.vercel.app/data")
+    fetch("https://api-three-vert.vercel.app/data")
       .then((res) => res.json())
       .then((data) => {
         //setHeader(data.shift()); // Remove and store the header row
