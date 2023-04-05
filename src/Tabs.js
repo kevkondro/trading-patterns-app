@@ -6,7 +6,7 @@ const Tab1 = lazy(() => import("./ChartSearch.js"));
 const Tab2 = lazy(() => import("./Rules.js"));
 const Tab3 = lazy(() => import("./Probabilities.js"));
 const Tab4 = lazy(() => import("./Notes.js"));
-//const Tab3 = lazy(() => import("./Tab3"));
+const Tab5 = lazy(() => import("./DataDisplay.js"));
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState(0);
@@ -22,6 +22,7 @@ export default function Tabs() {
         <MuiTab label="Rules" />
         <MuiTab label="Probabilities" />
         <MuiTab label="Notes" />
+        <MuiTab label="Data" />
       </MuiTabs>
       <div>
         <Suspense fallback={<div>Loading...</div>}>
@@ -29,6 +30,7 @@ export default function Tabs() {
           {activeTab === 1 && <Tab2 />}
           {activeTab === 2 && <Tab3 />}
           {activeTab === 3 && <Tab4 />}
+          {activeTab === 4 && <Tab5 />}
         </Suspense>
       </div>
     </div>
