@@ -7,15 +7,15 @@ const Tab1 = lazy(() => import("./ChartSearch.js"));
 const Tab2 = lazy(() => import("./Rules.js"));
 const Tab3 = lazy(() => import("./Probabilities.js"));
 // const Tab4 = lazy(() => import("./Notes.js"));
-const Tab5 = lazy(() => import("./DataDisplay.js"));
-const useStyles = makeStyles({
-  tabs: {
-    width:"10%",
-    margin: "1.5px",
-    fontSize: "14px",
-    padding: "0px",
-  },
-});
+const Tab4 = lazy(() => import("./DataDisplay.js"));
+// const useStyles = makeStyles({
+//   tabs: {
+//     width:"10%",
+//     margin: "1.5px",
+//     fontSize: "14px",
+//     padding: "0px",
+//   },
+// });
 export default function Tabs() {
   
   const classes = useStyles();
@@ -36,10 +36,10 @@ export default function Tabs() {
           // reduce padding for smaller screens
           padding: "0px",
         }}>
-        <MuiTab label="Search" className={classes.tabs}/>
-        <MuiTab label="Rules" className={classes.tabs}/>
-        <MuiTab label="Probs" className={classes.tabs}/>
-        <MuiTab label="Data" className={classes.tabs}/>
+        <MuiTab label="Search" />
+        <MuiTab label="Rules" />
+        <MuiTab label="Probs" />
+        <MuiTab label="Data" />
         {/* <MuiTab label="Data" className={classes.tabs}/> */}
       </MuiTabs>
       <div>
@@ -47,7 +47,7 @@ export default function Tabs() {
           {activeTab === 0 && <Tab1 />}
           {activeTab === 1 && <Tab2 />}
           {activeTab === 2 && <Tab3 />}
-          {activeTab === 3 && <Tab5 />}
+          {activeTab === 3 && <Tab4 />}
           {/* {activeTab === 4 && <Tab5 />} */}
         </Suspense>
       </div>
