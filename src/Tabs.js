@@ -8,17 +8,9 @@ const Tab2 = lazy(() => import("./Rules.js"));
 const Tab3 = lazy(() => import("./Probabilities.js"));
 // const Tab4 = lazy(() => import("./Notes.js"));
 const Tab4 = lazy(() => import("./DataDisplay.js"));
-// const useStyles = makeStyles({
-//   tabs: {
-//     width:"10%",
-//     margin: "1.5px",
-//     fontSize: "14px",
-//     padding: "0px",
-//   },
-// });
+
 export default function Tabs() {
   
-  const classes = useStyles();
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabChange = (event, newValue) => {
@@ -27,18 +19,10 @@ export default function Tabs() {
 
   return (
     <div>
-      <MuiTabs value={activeTab} onChange={handleTabChange}
-        // add custom styles to adjust for smaller screens
-        style={{
-          margin: "0px",
-          // reduce font size for smaller screens
-          fontSize: "14px",
-          // reduce padding for smaller screens
-          padding: "0px",
-        }}>
+      <MuiTabs value={activeTab} onChange={handleTabChange}>
         <MuiTab label="Search" />
         <MuiTab label="Rules" />
-        <MuiTab label="Probs" />
+        <MuiTab label="Probabilities" />
         <MuiTab label="Data" />
         {/* <MuiTab label="Data" className={classes.tabs}/> */}
       </MuiTabs>
